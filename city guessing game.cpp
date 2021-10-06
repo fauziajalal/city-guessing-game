@@ -77,9 +77,11 @@ int main(){
         else{
             cout<<endl;
             pos = find(buffer.begin() , buffer.end() , x);
-
-            
-            
+             if(pos != buffer.end() ){
+                cout << "                       ..........City already used, try again! "<<endl;
+                continue;
+            }
+            else{
                 char check = x.back();
                 char check1 = x.front();
                 if(checklastletter!=check1){
@@ -285,7 +287,7 @@ int main(){
                 
                 }
 
-            
+            }
 
         }
         cout<<"                                     Your Score is: "<<p1.score<<endl;
